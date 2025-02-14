@@ -45,12 +45,14 @@ const Servicepage = () => {
     return (
         <div>
             <h1>Services page</h1>
+            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+
             {
                 data.map((d)=>{
                     return (
                         <div className='my-5 bg-red-200'>
                             <Link href={`/services/${d._id}`} >
-                            <img src={d.service_image} alt="" />
+                            <img className='w-full' src={d.service_image} alt="" />
                             <h1>{d.service_name}</h1>
                             
                             </Link>
@@ -59,6 +61,8 @@ const Servicepage = () => {
                     )
                 })
             }
+            </div>
+           
             
         </div>
     );

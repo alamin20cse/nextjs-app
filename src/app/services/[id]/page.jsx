@@ -33,9 +33,8 @@ const ServiceDetailspage = ({params}) => {
           "service_description": "HomeFix specializes in home repair, plumbing, and electrical services to ensure your home remains safe and functional."
         }
       ]
-      
-
-    const id=params.id;
+    
+    const id=params?.id;
     const singleData=data.find((d)=>d._id==id)
     return (
         <div>
